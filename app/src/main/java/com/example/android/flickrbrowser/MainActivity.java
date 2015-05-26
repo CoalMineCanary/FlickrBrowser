@@ -66,7 +66,7 @@ public class MainActivity extends Activity {
        public class ProcessData extends DownloadJsonData {
 
            protected void onPostExecute(String webData) {
-           super.onPostExecute(String webData);
+           super.onPostExecute(webData);
                flickrRecyclerViewAdapter = new FlickrRecyclerViewAdapter(MainActivity.this, getMPhotos());
                mRecyclerView.setAdapter(flickrRecyclerViewAdapter);
 
