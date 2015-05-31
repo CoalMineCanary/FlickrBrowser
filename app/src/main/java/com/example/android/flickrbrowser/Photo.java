@@ -1,9 +1,13 @@
 package com.example.android.flickrbrowser;
 
+import java.io.Serializable;
+
 /**
  * Created by staywo on 5/11/15.
  */
-public class Photo {
+public class Photo implements Serializable {
+    private static final long serailVersionUID = 1L;
+
     private String mTitle;
     private String mAuthor;
     private String mAuthorId;
@@ -20,28 +24,32 @@ public class Photo {
         this.mImage = mImage;
     }
 
-    public String getmTitle() {
-        return mTitle;
+    public static long getSerailVersionUID() {
+        return serailVersionUID;
     }
 
-    public String getmAuthor() {
+    public String getImage() {
+        return mImage;
+    }
+
+    public String getAuthor() {
         return mAuthor;
     }
 
-    public String getmAuthorId() {
+    public String getAuthorId() {
         return mAuthorId;
     }
 
-    public String getmLink() {
+    public String getLink() {
         return mLink;
     }
 
-    public String getmTags() {
+    public String getTags() {
         return mTags;
     }
 
-    public String getmImage() {
-        return mImage;
+    public String getTitle() {
+        return mTitle;
     }
 
     @Override
