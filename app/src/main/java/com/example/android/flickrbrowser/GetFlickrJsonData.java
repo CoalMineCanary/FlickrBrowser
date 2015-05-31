@@ -49,9 +49,10 @@ public class GetFlickrJsonData extends GetRawData {
         return mDestinationUri != null;
     }
 
-    public List<Photo> getMPhotos() {
+    public List<Photo> getPhotos() {
         return mPhotos;
     }
+
     public void processResult() {
 
         if(getmDownloadStatus() != DownloadStatus.OK) {
